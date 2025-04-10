@@ -1,0 +1,4 @@
+ru\deusops\simplebackend\SimpleBackendApplication.class
+ru\deusops\simplebackend\dao\UsersDAO.class
+ru\deusops\simplebackend\controller\SimpleController.class
+ru\deusops\simplebackend\model\SimpleUser.class
