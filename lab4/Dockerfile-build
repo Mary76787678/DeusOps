@@ -1,0 +1,7 @@
+FROM system
+
+WORKDIR /build
+
+COPY java-app/ .
+
+RUN mvn package -DskipTests=true
