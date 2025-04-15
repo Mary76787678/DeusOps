@@ -4,10 +4,7 @@ services:
     restart: on-failure
     depends_on:
       - database
-    env_file:
-      - DB_USERNAME=postgres
-      - DB_PASSWORD=postgres
-      - DB_URL=jdbc:postgresql://database:5432/postgres
+    env_file: backend/backend.env
     ports:
       - 8080:8080
   database:
