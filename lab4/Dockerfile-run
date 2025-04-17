@@ -1,0 +1,15 @@
+FROM alpine
+
+WORKDIR /app
+
+EXPOSE 8080
+
+RUN apk add openjdk21 --no-cache && \
+    addgroup -S lab4 && \
+    adduser -S lab4 -G lab4
+
+USER lab4:lab4
+
+COPY --from=java-app-build /build/target/*.jar app.jar
+
+CMD [ "java", "-jar", "app.jar" ]
