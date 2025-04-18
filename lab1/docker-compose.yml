@@ -1,0 +1,8 @@
+services:
+  mynginx:
+    image: mynginx #find built image, if there isn't - build new
+    build: . #build context (where is files to work)
+    ports: #throw 80 container port to 8080 host port
+      - 8080:80
+    volumes: #set outer folder (nginx/html) as volume for docker container
+      - ./nginx/html:/etc/nginx/html
