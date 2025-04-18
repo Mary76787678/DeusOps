@@ -1,5 +1,0 @@
-spring:
-  application:
-    name: lab4
-greeting:
-  name: ${NAME}
